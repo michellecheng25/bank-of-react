@@ -19,7 +19,10 @@ function App() {
       <Routes>
         <Route path="/" element={<Home />} />
         <Route path="/login" element={<Login />} />
-        <Route path="/userprofile" element={<UserProfile />} />
+        <Route
+          path="/userprofile"
+          element={<UserProfile clientInfo={clientInfo} />}
+        />
         <Route path="/credits" element={<Credits />} />
         <Route path="/debits" element={<Debits />} />
       </Routes>
