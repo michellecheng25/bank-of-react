@@ -1,9 +1,12 @@
-import React from 'react'
+import React from "react";
+import Navbar from "../components/Navbar";
 
 function Debits() {
   return (
-    <div>Debits</div>
-  )
+    <div>
+      <Navbar />
+    </div>
+  );
 }
 
-export default Debits
+export default Debits;

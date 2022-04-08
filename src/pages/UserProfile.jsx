@@ -1,9 +1,12 @@
-import React from 'react'
+import React from "react";
+import Navbar from "../components/Navbar";
 
 function UserProfile() {
   return (
-    <div>UserProfile</div>
-  )
+    <div>
+      <Navbar />
+    </div>
+  );
 }
 
-export default UserProfile
+export default UserProfile;

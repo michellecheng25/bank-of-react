@@ -1,9 +1,14 @@
-import React from 'react'
+import React from "react";
+import Navbar from "../components/Navbar";
+import LoginForm from "../components/LoginForm";
 
 function Login() {
   return (
-    <div>Login</div>
-  )
+    <div>
+      <Navbar />
+      <LoginForm />
+    </div>
+  );
 }
 
-export default Login
+export default Login;

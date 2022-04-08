@@ -1,0 +1,20 @@
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  padding: 30px 10%;
+  background-color: #24252a;
+}
+
+.navbar-links {
+  display: flex;
+}
+.navbar .logo,
+.navbar .navbar-link {
+  color: white;
+  padding: 20px;
+}
+
+.navbar a {
+  color: white;
+  cursor: pointer;
+}
