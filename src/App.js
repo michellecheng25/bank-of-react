@@ -5,6 +5,7 @@ import UserProfile from "./pages/UserProfile";
 import Credits from "./pages/Credits";
 import Debits from "./pages/Debits";
 import { useState, useEffect } from "react";
+import { v4 as uuidv4 } from "uuid";
 import axios from "axios";
 
 function App() {
@@ -64,7 +65,9 @@ function App() {
 
   const addTransaction = (type, description, amount) => {
     const date = new Date().toISOString();
+    const id = uuidv4();
     const newTransaction = {
+      id,
       description,
       amount,
       date,
@@ -83,7 +86,7 @@ function App() {
         };
       });
     } else if (type === "debit") {
-      const newBalance = clientInfo.accountBalance + amount;
+      const newBalance = clientInfo.accountBalance - amount;
       console.log(newBalance);
       setClientInfo((prev) => {
         return {
@@ -94,8 +97,6 @@ function App() {
       });
     }
   };
-
-  console.log(clientInfo);
 
   return (
     <Router>
