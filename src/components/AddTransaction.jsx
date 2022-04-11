@@ -11,6 +11,7 @@ function AddTransaction({ addTransaction, type }) {
       parseFloat(amount.current.value)
     );
   };
+  const btnValue = "Add " + type;
   return (
     <form
       onSubmit={onSubmit}
@@ -36,7 +37,7 @@ function AddTransaction({ addTransaction, type }) {
           required
         />
       </label>
-      <input type="submit" value="Submit" />
+      <input type="submit" value={btnValue} />
     </form>
   );
 }
